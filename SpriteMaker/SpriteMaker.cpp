@@ -2,14 +2,11 @@
 //
 
 #include <iostream>
-#include <fstream>
-#include "stb_image/stb_image.h"
-#include "stb_image/stb_image_write.h"
+#include "Image.h"
 
 int main()
 {
-
-    std::cout << "Hello World!\n";
-    stbi_load();
+	Image first;
+	first.Load("./images/bmp/ex1-medium.bmp");
 }
 
