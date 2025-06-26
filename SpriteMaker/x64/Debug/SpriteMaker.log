@@ -1,4 +1,8 @@
 ﻿  Image.cpp
+C:\Users\Mohammad\Documents\Visual Studio 2022\Projects\SpriteMaker\Chilli-CPP-Beginner-Series-Sprite-Maker\SpriteMaker\Image.cpp(26,51): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\Mohammad\Documents\Visual Studio 2022\Projects\SpriteMaker\Chilli-CPP-Beginner-Series-Sprite-Maker\SpriteMaker\Image.cpp(37,65): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\Mohammad\Documents\Visual Studio 2022\Projects\SpriteMaker\Chilli-CPP-Beginner-Series-Sprite-Maker\SpriteMaker\Image.cpp(136,38): warning C4267: '+=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\Mohammad\Documents\Visual Studio 2022\Projects\SpriteMaker\Chilli-CPP-Beginner-Series-Sprite-Maker\SpriteMaker\Image.cpp(148,41): warning C4267: '+=': conversion from 'size_t' to 'uint32_t', possible loss of data
   SpriteMaker.cpp
   Generating Code...
   SpriteMaker.vcxproj -> C:\Users\Mohammad\Documents\Visual Studio 2022\Projects\SpriteMaker\Chilli-CPP-Beginner-Series-Sprite-Maker\x64\Debug\SpriteMaker.exe

@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+#include <vector>
 
 struct BMPFileHeader
 {
@@ -38,11 +40,23 @@ struct BMPColorHeader
 class Image
 {
 public:
-	void Load(const char* path);
+	Image(std::string file_name);
+	Image(int32_t width, int32_t height, bool has_alpha = true);
+	void write(std::string file_name);
+	void fill_region(uint32_t x0, uint32_t y0, uint32_t w, uint32_t h, uint8_t B, uint8_t G, uint8_t R, uint8_t A);
 
 private:
-	int fileSize;
-	int width;
-	int height;
+	void read(std::string file_name);
+	void check_color_header(BMPColorHeader& bmp_color_header);
+	void write_headers(std::ofstream& of);
+	void write_headers_and_data(std::ofstream& of);
+	uint32_t make_stride_aligned(uint32_t align_stride);
+
+private:
+	BMPFileHeader file_header;
+	BMPInfoHeader bmp_info_header;
+	BMPColorHeader bmp_color_header;
+	std::vector<uint8_t> data;
+	uint32_t row_stride{ 0 };
 };
 

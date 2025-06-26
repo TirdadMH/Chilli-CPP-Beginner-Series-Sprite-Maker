@@ -1,12 +1,10 @@
-// SpriteMaker.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include "Image.h"
 
 int main()
 {
-	Image first;
-	first.Load("./images/bmp/ex1-medium.bmp");
+	std::string path = "./images/bmp/snake.bmp";
+	Image snake_image(path);
+	snake_image.fill_region(50, 20, 100, 200, 0, 0, 255, 255);
 }
 
