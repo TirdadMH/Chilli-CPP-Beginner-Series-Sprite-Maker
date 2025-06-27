@@ -67,7 +67,7 @@ void Image::export_file()
 		std::string out_file_name = "./output_files/" + file_name + ".txt";
 		std::ofstream ofile(out_file_name);
 		for (auto pixel : pixels)
-			ofile << "gfx.PutPixel(" << pixel[0] << ", " << pixel[1] << ", " << pixel[2] << ", " << pixel[3] << ", " << pixel[4] << ");" << std::endl;
+			ofile << "gfx.PutPixel(" << pixel[0] << " + x, " << pixel[1] << " + y, " << pixel[2] << ", " << pixel[3] << ", " << pixel[4] << ");" << std::endl;
 		ofile.close();
 		std::cout << "Saved " << file_name + ".txt" << " to ./output_files.\n";
 	}

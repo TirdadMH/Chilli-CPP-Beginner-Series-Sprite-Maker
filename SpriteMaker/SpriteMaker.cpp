@@ -2,14 +2,6 @@
 
 int main(int argc, char* argv[])
 {
-    /*
-    char path[1024];
-    path[0] = 0;
-    if (_getcwd(path, sizeof(path)) != nullptr) 
-        strcat_s(path, "\\");
-    strcat_s(path, argv[0]);
-    std::cout << argv[0];
-    */
     std::cout << "Starting...\n----------\n";
     std::vector<std::string> images_path = scan_files(images_path);
     std::cout << "Found " << images_path.size() << " files.\n";
