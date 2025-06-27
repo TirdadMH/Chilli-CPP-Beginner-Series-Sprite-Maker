@@ -1,10 +1,18 @@
 #include <iostream>
-#include "Image.h"
+#include <string>
+#include <direct.h>
 
-int main()
+#define FILE_PATH "./images/bmp/ex1.bmp"
+
+
+int main(int argc, char* argv[])
 {
-	std::string path = "./images/bmp/snake.bmp";
-	Image snake_image(path);
-	snake_image.fill_region(50, 20, 100, 200, 0, 0, 255, 255);
+    /*char path[1024];
+    path[0] = 0;
+    if (_getcwd(path, sizeof(path)) != nullptr) 
+        strcat_s(path, "\\");*/
+    //strcat_s(path, argv[0]);
+    /*std::cout << argv[0];*/
+
 }
 
