@@ -14,6 +14,7 @@ private:
 	void export_file();
 
 private:
+	bool is_valid = true;
 	int width;
 	int height;
 	int image_channels;

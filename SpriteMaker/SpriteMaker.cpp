@@ -1,30 +1,30 @@
-#include <iostream>
-#include <string>
-#include <filesystem>
-#include "Image.h"
-namespace fs = std::filesystem;
-
-
+#include "utils.h"
 
 int main(int argc, char* argv[])
 {
-    /*char path[1024];
+    /*
+    char path[1024];
     path[0] = 0;
     if (_getcwd(path, sizeof(path)) != nullptr) 
-        strcat_s(path, "\\");*/
-    //strcat_s(path, argv[0]);
-    /*std::cout << argv[0];*/
-
-//    std::cout << "PLEASE WAIT...\n";
-//    std::string file_path = "./input_images/snake.bmp";
-//    std::vector<Image> images;
-    std::string input_images_path = "./input_images";
-    for (const auto& entry : fs::directory_iterator(input_images_path))
+        strcat_s(path, "\\");
+    strcat_s(path, argv[0]);
+    std::cout << argv[0];
+    */
+    std::cout << "Starting...\n----------\n";
+    std::vector<std::string> images_path = scan_files(images_path);
+    std::cout << "Found " << images_path.size() << " files.\n";
+    for (const auto& path : images_path) std::cout << path << std::endl;
+    std::cout << "----------\n" << "Processing...\n";
+    int index = 0;
+    for (const auto& path : images_path)
     {
-        std::string entro = entry.path().string();
-        std::cout << entro << std::endl;
+        std::cout << "(" << index + 1 << "/" << images_path.size() <<") ";
+        Image image(path);
+        index++;
     }
- //   Image ex1(file_path);
-//    std::cout << "DONE!\n";
+    std::cout << "Operation done for " << find_number_of_output_files() << " files.";
+    std::cout << "\n==============================================================\n";
+    system("pause");
+    return 0;
 }
 
