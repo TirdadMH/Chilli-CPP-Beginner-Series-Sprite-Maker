@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+.vs/SpriteMaker/v17/.suo
+/.vs
+*.json
+/.vs
+/.vs/SpriteMaker/v17
+/.vs/SpriteMaker
