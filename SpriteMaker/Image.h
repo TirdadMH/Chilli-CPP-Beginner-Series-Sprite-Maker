@@ -1,17 +1,17 @@
 #pragma once
 #include <array>
 #include <vector>
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image/stb_image.h"
-
+#include <string>
 
 class Image
 {
 public:
-	Image(const char* file_path);
+	Image(std::string file_path);
 
 private:
-	void read(const char* file_path);
+	void read(std::string file_path);
+	void get_file_name(std::string file_path);
+	void export_file();
 
 private:
 	int width;
@@ -19,5 +19,6 @@ private:
 	int image_channels;
 	int desired_channels = 3; // 3 for RGB, 4 for RGBA
 	std::vector<std::array<int, 5>> pixels;
+	std::string file_name;
 };
 
